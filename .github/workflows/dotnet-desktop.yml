@@ -19,10 +19,8 @@ jobs:
 
     - name: Build project
       run: dotnet build Sharpmssqluser.sln --configuration Release --no-restore
-	  
     - name: Build with MSBuild (.NET Framework)
       run: msbuild Sharpmssqluser.csproj /p:Configuration=Release /p:Platform="Any CPU"
-	  
     - name: Copy output to publish folder
       run: |
         mkdir publish
